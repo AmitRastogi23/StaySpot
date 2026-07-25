@@ -90,6 +90,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/" , (req,res,next) => {
+  res.redirect("/listings");
+})
+
 app.use("/listings", listingRouter);
 app.use("/reviews", reviewRouter);
 app.use("/user", userRouter);
