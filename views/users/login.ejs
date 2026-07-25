@@ -1,0 +1,43 @@
+<% layout("/layout/boilerplate") -%>
+<body>
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <h1>Welcome back</h1>
+      <p class="auth-subtext">Log in to continue booking stays</p>
+
+      <form action="/user/login" method="post" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input
+            type="text"
+            placeholder="Enter your username"
+            id="username"
+            name="username"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Enter a valid username.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            id="password"
+            name="password"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Enter a valid password.</div>
+        </div>
+
+        <button class="auth-submit-btn mt-2" type="submit">Log In</button>
+
+        <p class="auth-footer-text">
+          Don't have an account? <a href="/user/signup">Sign up</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
