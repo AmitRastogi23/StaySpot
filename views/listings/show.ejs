@@ -33,10 +33,10 @@
 
         <% if (currUser && currUser._id.equals(result.owner._id)) { %>
           <div class="listing-owner-actions">
-            <form action="http://localhost:8080/listings/<%=result._id%>/update" method="get">
+            <form action="/listings/<%=result._id%>/update" method="get">
               <button type="submit" class="btn edit-btn">Edit</button>
             </form>
-            <form action="http://localhost:8080/listings/<%=result._id%>?_method=DELETE" method="post">
+            <form action="/listings/<%=result._id%>?_method=DELETE" method="post">
               <button type="submit" class="btn show-btn">Delete</button>
             </form>
           </div>
