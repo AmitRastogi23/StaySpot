@@ -97,16 +97,37 @@ Follow these steps to run the project locally:
 ```bash
 git clone https://github.com/AmitRastogi23/WanderLust.git
 cd WanderLust
-npm install
 
+```
+
+### Step 2: Install Dependencies
+
+```bash
+npm install
+```
+
+### Step 3: Configure Environment Variables
+
+Create a .env file in the root directory and add the following:
+
+```bash
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 MONGO_URL=your_mongodb_connection_string
 SECRET=your_session_secret
-
-node init/index.js
-
-node app.js
-
 ```
+
+### Step 4: Seed the Database (Optional)
+
+```bash
+node init/index.js
+```
+
+### Step 5: Start the Application
+
+```bash
+node app.js
+```
+
+The application will be running at http://localhost:8080
