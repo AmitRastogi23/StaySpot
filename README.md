@@ -40,45 +40,47 @@ https://wanderlust-a9t1.onrender.com/
 
 ## 📁 Project Structure
 
+```
 WanderLust/
 ├── controllers/
-│ ├── listings.js # Listing CRUD operations
-│ ├── reviews.js # Review operations (create, delete)
-│ └── users.js # User authentication logic
+│   ├── listings.js          # Listing CRUD operations
+│   ├── reviews.js           # Review operations (create, delete)
+│   └── users.js             # User authentication logic
 ├── init/
-│ └── index.js # Database seeding with sample listings
+│   └── index.js             # Database seeding with sample listings
 ├── models/
-│ ├── listing.js # Listing schema (title, price, images, etc.)
-│ ├── review.js # Review schema (rating, comment, author)
-│ └── user.js # User schema (username, email, password)
+│   ├── listing.js           # Listing schema (title, price, images, etc.)
+│   ├── review.js            # Review schema (rating, comment, author)
+│   └── user.js              # User schema (username, email, password)
 ├── public/
-│ ├── css/ # Stylesheets (Bootstrap + custom CSS)
-│ └── js/ # Client-side JavaScript files
+│   ├── css/                 # Stylesheets (Bootstrap + custom CSS)
+│   └── js/                  # Client-side JavaScript files
 ├── routes/
-│ ├── listing.js # Listing routes (CRUD endpoints)
-│ ├── review.js # Review routes (POST, DELETE)
-│ └── user.js # Authentication routes (login, signup, logout)
+│   ├── listing.js           # Listing routes (CRUD endpoints)
+│   ├── review.js            # Review routes (POST, DELETE)
+│   └── user.js              # Authentication routes (login, signup, logout)
 ├── utils/
-│ ├── ExpressError.js # Custom error class for Express
-│ └── wrapAsync.js # Async error handling wrapper
+│   ├── ExpressError.js      # Custom error class for Express
+│   └── wrapAsync.js         # Async error handling wrapper
 ├── views/
-│ ├── listings/ # Listing-related pages
-│ │ ├── index.ejs # All listings (homepage)
-│ │ ├── new.ejs # Create new listing form
-│ │ ├── show.ejs # Single listing details
-│ │ └── edit.ejs # Edit listing form
-│ ├── reviews/ # Review-related partials
-│ │ └── review.ejs # Review form and list
-│ └── users/ # Authentication pages
-│ ├── login.ejs # Login page
-│ └── signup.ejs # Signup page
-├── .gitignore # Git ignored files (node_modules, .env, etc.)
-├── app.js # Main application entry point
-├── cloudConfig.js # Cloudinary configuration
-├── middleware.js # Custom middleware (isLoggedIn, isAuthor, etc.)
-├── package.json # Dependencies and scripts
-├── package-lock.json # Dependency lockfile
-└── schema.js # Joi validation schemas
+│   ├── listings/
+│   │   ├── index.ejs        # All listings (homepage)
+│   │   ├── new.ejs          # Create new listing form
+│   │   ├── show.ejs         # Single listing details
+│   │   └── edit.ejs         # Edit listing form
+│   ├── reviews/
+│   │   └── review.ejs       # Review form and list
+│   └── users/
+│       ├── login.ejs        # Login page
+│       └── signup.ejs       # Signup page
+├── .gitignore               # Git ignored files (node_modules, .env, etc.)
+├── app.js                   # Main application entry point
+├── cloudConfig.js           # Cloudinary configuration
+├── middleware.js            # Custom middleware (isLoggedIn, isAuthor, etc.)
+├── package.json             # Dependencies and scripts
+├── package-lock.json        # Dependency lockfile
+└── schema.js                # Joi validation schemas
+```
 
 ## 🛠️ Installation & Setup
 
@@ -96,7 +98,6 @@ Follow these steps to run the project locally:
 git clone https://github.com/AmitRastogi23/WanderLust.git
 cd WanderLust
 npm install
-```
 
 CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
@@ -107,3 +108,5 @@ SECRET=your_session_secret
 node init/index.js
 
 node app.js
+
+```
