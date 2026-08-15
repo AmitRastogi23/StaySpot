@@ -41,36 +41,43 @@ https://wanderlust-a9t1.onrender.com/
 ## 📁 Project Structure
 
 WanderLust/
-├── controllers/ # Business logic for routes
+├── controllers/
 │ ├── listings.js # Listing CRUD operations
-│ ├── reviews.js # Review operations
-│ └── users.js # Authentication logic
-├── init/ # Database initialization/seeding scripts
-│ └── index.js # Seeds database with sample listings
-├── models/ # Database schemas (Mongoose)
-│ ├── listing.js
-│ ├── review.js
-│ └── user.js
-├── public/ # Static assets (CSS, JS, images)
-│ ├── css/
-│ └── js/
-├── routes/ # Express route definitions
-│ ├── listing.js
-│ ├── review.js
-│ └── user.js
-├── utils/ # Helper functions and error handling
-│ ├── ExpressError.js
-│ └── wrapAsync.js
-├── views/ # EJS templates
+│ ├── reviews.js # Review operations (create, delete)
+│ └── users.js # User authentication logic
+├── init/
+│ └── index.js # Database seeding with sample listings
+├── models/
+│ ├── listing.js # Listing schema (title, price, images, etc.)
+│ ├── review.js # Review schema (rating, comment, author)
+│ └── user.js # User schema (username, email, password)
+├── public/
+│ ├── css/ # Stylesheets (Bootstrap + custom CSS)
+│ └── js/ # Client-side JavaScript files
+├── routes/
+│ ├── listing.js # Listing routes (CRUD endpoints)
+│ ├── review.js # Review routes (POST, DELETE)
+│ └── user.js # Authentication routes (login, signup, logout)
+├── utils/
+│ ├── ExpressError.js # Custom error class for Express
+│ └── wrapAsync.js # Async error handling wrapper
+├── views/
 │ ├── listings/ # Listing-related pages
+│ │ ├── index.ejs # All listings (homepage)
+│ │ ├── new.ejs # Create new listing form
+│ │ ├── show.ejs # Single listing details
+│ │ └── edit.ejs # Edit listing form
 │ ├── reviews/ # Review-related partials
+│ │ └── review.ejs # Review form and list
 │ └── users/ # Authentication pages
-├── .gitignore # Files/folders ignored by Git
+│ ├── login.ejs # Login page
+│ └── signup.ejs # Signup page
+├── .gitignore # Git ignored files (node_modules, .env, etc.)
 ├── app.js # Main application entry point
 ├── cloudConfig.js # Cloudinary configuration
-├── middleware.js # Custom middleware functions
-├── package.json # Project dependencies and scripts
-├── package-lock.json # Lockfile for dependencies
+├── middleware.js # Custom middleware (isLoggedIn, isAuthor, etc.)
+├── package.json # Dependencies and scripts
+├── package-lock.json # Dependency lockfile
 └── schema.js # Joi validation schemas
 
 ## 🛠️ Installation & Setup
