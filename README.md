@@ -131,3 +131,7 @@ node app.js
 ```
 
 The application will be running at http://localhost:8080
+
+## 📜 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
