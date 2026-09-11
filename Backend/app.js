@@ -9,7 +9,7 @@ const app = express();
 const cors = require("cors");
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://stay-spot-project.vercel.app/",
     credentials: true,
   }),
 );
@@ -83,9 +83,9 @@ main()
     console.log(err);
   });
 
-const port = 8080;
-app.listen(port, () => {
-  console.log(`backend is working on port ${port}`);
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
 // middleware to add flash messages in res.local
@@ -94,10 +94,6 @@ app.use((req, res, next) => {
   res.locals.failure = req.flash("failure");
   res.locals.currUser = req.user;
   next();
-});
-
-app.get("/", (req, res, next) => {
-  res.send("backend is working ---- continue your work");
 });
 
 app.use("/api/listings", listingRouter);
