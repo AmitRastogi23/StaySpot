@@ -65,7 +65,7 @@ function Navbar() {
       <div className="navbar-container">
         <NavLink to="/" className="navbar-brand">
           <i className="fa-regular fa-compass"></i>
-          <span>wanderlust</span>
+          <span>StaySpot</span>
         </NavLink>
 
         <button

@@ -1,10 +1,8 @@
-# 🌍 WanderLust - Travel Listing Platform
+# 🌍 StaySpot - Travel Listing Platform
 
-Welcome to **WanderLust**, a full-stack web application inspired by Airbnb. It allows users to discover, share, and review travel accommodations or exciting places to stay. This project is built with a robust MVC architecture and integrates cloud services for a seamless user experience.
+Welcome to **StaySpot**, a full-stack web application inspired by Airbnb. It allows users to discover, share, and review travel accommodations or exciting places to stay. This project is built with a robust MVC architecture and integrates cloud services for a seamless user experience.
 
 ## 🚀 Live Demo
-
-https://wanderlust-a9t1.onrender.com/
 
 ## ✨ Key Features
 
@@ -41,7 +39,7 @@ https://wanderlust-a9t1.onrender.com/
 ## 📁 Project Structure
 
 ```
-WanderLust/
+StaySpot/
 ├── controllers/
 │   ├── listings.js          # Listing CRUD operations
 │   ├── reviews.js           # Review operations (create, delete)
@@ -95,8 +93,6 @@ Follow these steps to run the project locally:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/AmitRastogi23/WanderLust.git
-cd WanderLust
 
 ```
 

@@ -19,7 +19,7 @@ function Footer() {
         </div>
 
         <div className="footer-copyright">
-          &copy; WanderLust Private Limited
+          &copy; StaySpot Private Limited
         </div>
 
         <div className="footer-links">

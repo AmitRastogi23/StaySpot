@@ -13,7 +13,7 @@ module.exports.postSignup = async (req, res, next) => {
       }
       res.status(201).json({
         status: "success",
-        message: "Welcome to WanderLust!!!",
+        message: "Welcome to StaySpot!!!",
         user: {
           id: registration._id,
           username: registration.username,
@@ -33,7 +33,7 @@ module.exports.postLogin = (req, res) => {
   let redirectUrl = res.locals.redirectUrl || "/";
   res.status(200).json({
     status: "success",
-    message: "Welcome to Wanderlust!! You are logged in successfully.",
+    message: "Welcome to StaySpot!! You are logged in successfully.",
     redirectUrl: redirectUrl,
     user: {
       id: req.user._id,
