@@ -1,0 +1,156 @@
+/* Edit Listing Page */
+
+.edit-listing-wrapper {
+    padding: 2.5rem 1rem 3.5rem;
+    background-color: #f7f7f7;
+    min-height: calc(100vh - 5rem - 5rem);
+}
+
+.edit-listing-card {
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem 2.5rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.edit-listing-card h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.35rem;
+}
+
+.edit-listing-subtext {
+    text-align: center;
+    color: #6a6a6a;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+/* Form */
+
+.edit-form-group {
+    margin-bottom: 1rem;
+}
+
+.edit-form-group label {
+    display: block;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.edit-form-group input,
+.edit-form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.9rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #ffffff;
+}
+
+.edit-form-group input:focus,
+.edit-form-group textarea:focus {
+    outline: none;
+    border-color: #fe424d;
+    box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.15);
+}
+
+.edit-form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* File input */
+
+.edit-form-group input[type="file"] {
+    padding: 0.5rem 0.9rem;
+}
+
+/* Current image */
+
+.current-listing-image {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+/* Price + Country */
+
+.edit-form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.price-group {
+    flex: 0 0 33.333%;
+}
+
+.country-group {
+    flex: 1;
+}
+
+/* Save Changes Button */
+
+.edit-listing-btn {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+
+    background-color: #fe424d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.edit-listing-btn:hover {
+    background-color: #e0323c;
+    color: white;
+}
+
+.edit-listing-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .edit-listing-card {
+        padding: 1.75rem 1.5rem 1.5rem;
+        border-radius: 1rem;
+    }
+
+    .edit-listing-wrapper {
+        padding: 2rem 0.75rem;
+    }
+
+    .edit-form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .price-group,
+    .country-group {
+        flex: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .edit-listing-card {
+        padding: 1.5rem 1.1rem 1.25rem;
+    }
+}

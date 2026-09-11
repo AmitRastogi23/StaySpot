@@ -1,0 +1,49 @@
+.listing-links {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.listing-card {
+    border: none;
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease;
+}
+
+.listing-card:hover {
+    transform: translateY(-4px);
+}
+
+.listing-card-image {
+    border-radius: 1rem;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
+    transition: filter 0.2s ease;
+}
+
+.listing-card-body {
+    padding: 0.75rem 0 0 0;
+}
+
+.listing-card-title {
+    margin: 0.5rem 0 0.15rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #222222;
+}
+
+.listing-card-desc {
+    margin: 0 0 0.15rem;
+    color: #6a6a6a;
+}
+
+.listing-card-price {
+    margin: 0;
+    color: #222222;
+}
+
+.tax-info {
+    font-style: normal;
+}

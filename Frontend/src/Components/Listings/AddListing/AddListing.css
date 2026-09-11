@@ -1,0 +1,282 @@
+/* ==============================
+   LISTING FORM
+================================ */
+
+.listing-form-wrapper {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    background-color: #ffffff;
+}
+
+
+/* ==============================
+   FORM CARD
+================================ */
+
+.listing-form-card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 35px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.listing-form-card h1 {
+    margin: 0;
+
+    color: #222222;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   SUBTEXT
+================================ */
+
+.listing-form-subtext {
+    margin: 10px 0 30px;
+
+    color: #666666;
+
+    font-size: 15px;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   FORM GROUP
+================================ */
+
+.listing-form-group {
+    margin-bottom: 20px;
+}
+
+.listing-form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #222222;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ==============================
+   INPUTS
+================================ */
+
+.listing-form-group input,
+.listing-form-group textarea {
+    width: 100%;
+
+    padding: 11px 14px;
+
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+
+    background-color: #ffffff;
+
+    color: #222222;
+
+    font-size: 14px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition: border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.listing-form-group input {
+    height: 45px;
+}
+
+.listing-form-group textarea {
+    min-height: 120px;
+
+    resize: vertical;
+
+    font-family: inherit;
+}
+
+.listing-form-group input:focus,
+.listing-form-group textarea:focus {
+    border-color: #fe424d;
+
+    box-shadow: 0 0 0 2px rgba(254, 66, 77, 0.1);
+}
+
+.listing-form-group input::placeholder,
+.listing-form-group textarea::placeholder {
+    color: #999999;
+}
+
+
+/* ==============================
+   FILE INPUT
+================================ */
+
+.listing-form-group input[type="file"] {
+    padding: 10px;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   PRICE + COUNTRY
+================================ */
+
+.listing-form-row {
+    display: flex;
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+.price-group {
+    flex: 1;
+}
+
+.country-group {
+    flex: 2;
+}
+
+
+/* ==============================
+   VALIDATION
+================================ */
+
+.invalid-feedback {
+    display: none;
+
+    margin-top: 6px;
+
+    color: #dc3545;
+
+    font-size: 13px;
+}
+
+
+/* ==============================
+   ADD BUTTON
+================================ */
+
+.add-listing-btn {
+    width: 100%;
+    height: 46px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #fe424d;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.add-listing-btn:hover {
+    background-color: #e53843;
+}
+
+
+/* ==============================
+   TABLET
+================================ */
+
+@media (max-width: 768px) {
+
+    .listing-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .listing-form-card {
+        padding: 30px 25px;
+    }
+
+    .listing-form-row {
+        gap: 15px;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 576px) {
+
+    .listing-form-wrapper {
+        padding: 25px 15px;
+        align-items: flex-start;
+    }
+
+    .listing-form-card {
+        padding: 25px 20px;
+
+        border-radius: 10px;
+    }
+
+    .listing-form-card h1 {
+        font-size: 24px;
+    }
+
+    .listing-form-subtext {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .listing-form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .price-group,
+    .country-group {
+        flex: none;
+    }
+}
+
+
+/* ==============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 400px) {
+
+    .listing-form-card {
+        padding: 22px 16px;
+    }
+
+    .listing-form-card h1 {
+        font-size: 22px;
+    }
+}

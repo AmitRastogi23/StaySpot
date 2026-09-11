@@ -1,0 +1,482 @@
+.listing-detail-wrapper {
+    max-width: 1400px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.listing-detail-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 28px;
+    color: #222222;
+}
+
+.listing-detail-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.listing-detail-image {
+    width: 100%;
+    aspect-ratio: 1.55 / 1;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+}
+
+.listing-owner-tag {
+    margin-top: 18px;
+    color: #6a6a6a;
+    font-size: 16px;
+}
+
+.listing-info-panel {
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-radius: 1rem;
+    padding: 36px;
+    box-sizing: border-box;
+}
+
+.listing-desc {
+    font-size: 19px;
+    line-height: 1.6;
+    color: #222222;
+    margin: 0 0 32px;
+}
+
+.listing-detail-facts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #dddddd;
+}
+
+.listing-detail-facts li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.fact-label {
+    font-weight: 400;
+    color: #666666;
+    font-size: 18px;
+}
+
+.fact-value {
+    color: #222222;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.listing-owner-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.listing-owner-actions .edit-btn,
+.listing-owner-actions .show-btn {
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #fe424d;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.listing-owner-actions .edit-btn:hover,
+.listing-owner-actions .show-btn:hover {
+    background-color: #e0323c;
+    color: white;
+}
+
+.review-section {
+    width: 100%;
+    margin-top: 55px;
+}
+
+.review-section h4 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 18px;
+    color: #222222;
+}
+
+.review-form {
+    width: 100%;
+    background: #f7f7f7;
+    border-radius: 1rem;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+.review-form textarea {
+    width: 100%;
+    min-height: 135px;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 16px;
+    color: #222222;
+    outline: none;
+    background: #ffffff;
+}
+
+.review-form textarea::placeholder {
+    color: #777777;
+}
+
+.review-form textarea:focus {
+    border-color: #fe424d;
+}
+
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.review-submit-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 22px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #222222;
+}
+
+.starability-slot {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 2px;
+}
+
+.starability-slot input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.starability-slot label {
+    width: 32px;
+    height: 32px;
+    display: block;
+    cursor: pointer;
+    font-size: 0;
+    line-height: 1;
+    color: #dddddd;
+    transition: color 0.15s ease;
+}
+
+.starability-slot label::before {
+    content: "★";
+    display: block;
+    font-size: 32px;
+    line-height: 32px;
+    color: #dddddd;
+}
+
+.starability-slot label:hover::before,
+.starability-slot label:hover~label::before {
+    color: #fe424d;
+}
+
+.starability-slot input:checked+label::before,
+.starability-slot input:checked+label~label::before {
+    color: #fe424d;
+}
+
+.add-btn {
+    border: none;
+    background: #fe424d;
+    color: white;
+    padding: 13px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-btn:hover {
+    background: #e0323c;
+}
+
+.add-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.add-btn i {
+    font-size: 14px;
+}
+
+.reviews-heading {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.reviews-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.review-card {
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 20px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fe424d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.review-author-name {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.review-rating-text {
+    margin: 15px 0 8px;
+    font-size: 20px;
+    color: #fe424d;
+    letter-spacing: 2px;
+}
+
+.review-comment {
+    margin: 0;
+    line-height: 1.5;
+    color: #333333;
+    font-size: 15px;
+}
+
+.review-delete-btn {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    background: none;
+    color: #dc3545;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px 6px;
+}
+
+.review-delete-btn:hover {
+    color: #b02a37;
+    text-decoration: underline;
+}
+
+.review-delete-btn i {
+    font-size: 12px;
+}
+
+.loading-text {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.delete-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.delete-modal {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.delete-modal h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.4rem;
+}
+
+.delete-modal p {
+    color: #6a6a6a;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.delete-modal-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.cancel-delete-btn,
+.confirm-delete-btn {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cancel-delete-btn {
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+.cancel-delete-btn:hover {
+    background-color: #dddddd;
+}
+
+.confirm-delete-btn {
+    background-color: #fe424d;
+    color: white;
+}
+
+.confirm-delete-btn:hover {
+    background-color: #e0323c;
+}
+
+.confirm-delete-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+    .listing-detail-wrapper {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .listing-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .listing-detail-image {
+        aspect-ratio: 16 / 10;
+    }
+
+    .listing-info-panel {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .listing-detail-title {
+        font-size: 28px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .listing-detail-wrapper {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .listing-detail-title {
+        font-size: 24px;
+    }
+
+    .review-submit-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .add-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .listing-owner-actions {
+        flex-direction: column;
+    }
+
+    .delete-modal {
+        padding: 1.5rem;
+    }
+
+    .delete-modal-actions {
+        flex-direction: column;
+    }
+
+    .review-form {
+        padding: 20px;
+    }
+}
