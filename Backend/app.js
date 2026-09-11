@@ -33,6 +33,9 @@ const store = MongoStore.create({
 store.on("error", (err) => {
   console.log("error in mongo session store", err);
 });
+
+app.set("trust proxy", 1);
+
 const sessionOption = session({
   store,
   secret: process.env.SECRET,
@@ -42,6 +45,8 @@ const sessionOption = session({
     expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
     maxAge: 7 * 24 * 60 * 60 * 1000,
     httpOnly: true,
+    sameSite: "none",
+    secure: true,
   },
 });
 app.use(sessionOption);
