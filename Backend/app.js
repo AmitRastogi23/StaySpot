@@ -9,7 +9,7 @@ const app = express();
 const cors = require("cors");
 app.use(
   cors({
-    origin: "*",
+    origin: "https://stay-spot-project.vercel.app",
     credentials: true,
   }),
 );
