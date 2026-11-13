@@ -93,7 +93,8 @@ Follow these steps to run the project locally:
 ### Step 1: Clone the Repository
 
 ```bash
-
+git clone https://github.com/AmitRastogi23/StaySpot.git
+cd StaySpot
 ```
 
 ### Step 2: Install Dependencies

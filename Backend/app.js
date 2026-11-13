@@ -9,20 +9,17 @@ const app = express();
 const cors = require("cors");
 app.use(
   cors({
-    origin: "https://stay-spot-project.vercel.app",
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   }),
 );
 
 const mongoose = require("mongoose");
-const passport = require("passport");
-const LocalStrategy = require("passport-local");
 const User = require("./models/User");
 const ExpressError = require("./utils/ExpressError");
 
 const session = require("express-session");
 const MongoStore = require("connect-mongo").default;
-const flash = require("connect-flash");
 const store = MongoStore.create({
   mongoUrl: db_URL,
   crypto: {
@@ -50,7 +47,9 @@ const sessionOption = session({
   },
 });
 app.use(sessionOption);
-app.use(flash());
+
+const passport = require("passport");
+const LocalStrategy = require("passport-local");
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -58,19 +57,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-const ejsMate = require("ejs-mate");
-app.engine("ejs", ejsMate);
-
-const methodOverride = require("method-override");
-app.use(methodOverride("_method"));
-
-const path = require("path");
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, "public")));
-
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 const listingRouter = require("./routes/listings");
 const reviewRouter = require("./routes/reviews");
@@ -91,14 +78,6 @@ main()
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-});
-
-// middleware to add flash messages in res.local
-app.use((req, res, next) => {
-  res.locals.success = req.flash("success");
-  res.locals.failure = req.flash("failure");
-  res.locals.currUser = req.user;
-  next();
 });
 
 app.use("/api/listings", listingRouter);

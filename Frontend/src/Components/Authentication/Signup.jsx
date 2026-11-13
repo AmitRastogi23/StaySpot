@@ -1,6 +1,7 @@
 import "./Auth.css";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AuthContext } from "../../Context/AuthContext";
 
 function Signup() {
   const navigate = useNavigate();
@@ -10,6 +11,8 @@ function Signup() {
     username: "",
     password: "",
   });
+
+  const { setCurrentUser } = useContext(AuthContext);
 
   const handleChange = (e) => {
     setFormData({
@@ -22,19 +25,23 @@ function Signup() {
     e.preventDefault();
     setError("");
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/user/signup`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/user/signup`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify(formData),
         },
-        credentials: "include",
-        body: JSON.stringify(formData),
-      });
+      );
       const data = await response.json();
       if (!response.ok) {
         setError(data.message);
         return;
       }
+      setCurrentUser(data.user);
       navigate("/");
     } catch (err) {
       setError("Something went wrong. Please try again.");
